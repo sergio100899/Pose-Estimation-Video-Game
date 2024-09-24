@@ -38,6 +38,7 @@ while cap.isOpened():
                 cx, cy = int(landmark.x * w), int(landmark.y * h)
                 points[idx] = (cx, cy)
                 cv2.circle(img, (cx, cy), 5, (0, 255, 0), cv2.FILLED)
+                print(f"Landmark {idx}: ({cx}, {cy})")
 
         # Dibuja líneas entre los puntos seleccionados
         for connection in connections:
