@@ -9,7 +9,7 @@ mpPose = mp.solutions.pose
 pose = mpPose.Pose()
 
 width = 1080
-height = 7200
+height = 720
 
 cap = cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
@@ -260,6 +260,7 @@ while cap.isOpened():
 
         if is_taichi_pull_down(results.pose_landmarks):
             cv2.putText(img, 'Tai Chi Pull Down Detected', (20, height-10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)  
+
 
     cTime = time.time()
     fps = 1 / (cTime - pTime)
