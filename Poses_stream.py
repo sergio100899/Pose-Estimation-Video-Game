@@ -53,18 +53,22 @@ def calculate_angle(a, b, c):
     # Calcular el ángulo entre tres puntos
     angle = math.degrees(math.atan2(c[1] - b[1], c[0] - b[0]) - math.atan2(a[1] - b[1], a[0] - b[0]))
     angle = round(angle,2)
-    if angle > 180:
-        angle_new = 360 - angle
-        # print(f"original angle:{angle}, new angle: {angle_new}")
-        return angle_new
-    elif angle < 0:
+
+    if angle < 0:
         angle_new = -1*angle
-        # print(f"original angle:{angle}, new angle: {angle_new}")
-        return angle_new
+
+        if angle_new > 180:
+            angle_new = 360 - angle_new
+            return angle_new
+        else:
+            return angle_new
     else:
-        # print(f"original angle:{angle}, new angle: {angle}")
-        return angle
-    #return angle + 360 if angle < 0 else angle
+        if angle > 180:
+            angle_new = 360 - angle
+            return angle_new
+        else:
+            return angle
+
 
 def calculate_distance(point1, point2, width = width, height = height):
     x1, y1 = point1[0]*width, point1[1]*height
