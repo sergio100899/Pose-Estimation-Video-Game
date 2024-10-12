@@ -116,9 +116,9 @@ def is_taichi_push(pose_landmarks ):
 
     # Definir las condiciones para la pose del push de Tai Chi
     if right_leg_angle > 170 and left_leg_angle < 110 and left_leg_angle > 80 and right_arm_angle > 140 and left_arm_angle > 140:
-        if hands_distance < 35 and elbows_distance < 35:
+        # if hands_distance < 35 and elbows_distance < 35:
             # print("yes") 
-            return True
+        return True
     
     return False
 
@@ -151,9 +151,9 @@ def is_taichi_split(pose_landmarks):
 
     # Definir las condiciones para la pose del split de Tai Chi
     if left_leg_angle > 170 and right_leg_angle < 110 and right_leg_angle > 80 and right_arm_angle > 170 and left_arm_angle > 70 and left_arm_angle < 100:
-        if hands_distance > 60:
+        # if hands_distance > 60:
             # print("yes")
-            return True
+        return True
 
     return False
 
@@ -185,9 +185,9 @@ def is_taichi_ward_off(pose_landmarks):
 
     # Definir las condiciones para la pose del split de Tai Chi
     if left_leg_angle > 80 and left_leg_angle < 120 and right_leg_angle > 120 and right_leg_angle < 160 and left_arm_angle < 160 and right_arm_angle < 70:
-        if hands_distance > 60:
+        # if hands_distance > 60:
             # print("yes")
-            return True
+        return True
 
     return False
 
@@ -220,9 +220,9 @@ def is_taichi_pull_down(pose_landmarks):
 
     # Definir las condiciones para la pose del split de Tai Chi
     if left_leg_angle > 170 and right_leg_angle < 110 and left_arm_angle > 70 and left_arm_angle < 100 and right_arm_angle < 10:
-        if hands_distance > 60:
+        # if hands_distance > 60:
             # print("yes")
-            return True
+        return True
 
     return False    
 
